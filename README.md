@@ -99,7 +99,7 @@ We evaluated Seed-X on a diverse set of translation benchmarks, including FLORES
 
 For detailed benchmark results and analysis, please refer to our [Technical Report](https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/Technical_Report.pdf).
 ## License
-This project is licensed under OpenMDW. See the [LICENSE]() flie for details.
+This project is licensed under OpenMDW. See the [LICENSE](https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/LICENSE.openmdw) flie for details.
 
 ## Citation
 If you find Seed-X useful for your research and applications, feel free to give us a star ⭐ or cite us using:
