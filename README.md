@@ -26,7 +26,7 @@
 
 # Seed-X: Building Strong Open-source Multilingual Translation LLM with 7B Parameters
 <p align="center">
-  <a href="https://code.byted.org/seed/SEED-X-7B/blob/ylu_dev/Technical_Report.pdf">
+  <a href="https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/Technical_Report.pdf">
     <img src="https://img.shields.io/badge/Seed--X-Report-blue"></a>
   <a href="XXXX">
     <img src="https://img.shields.io/badge/Seed--X-Hugging Face-brightgreen"></a>
@@ -51,9 +51,7 @@ We are excited to introduce **Seed-X**, a powerful open-source multilingual tran
 ## 🌟 Highlights
 
 * **Exceptional translation capabilities**: Seed-X exhibits state-of-the-art translation capabilities, on par with or outperforming ultra-large models like Gemini-2.5, Claude-3.5, and GPT-4, as validated by human evaluations and automatic metrics.
-<br>
 * **Deployment and inference-friendly**: With a compact 7B parameter count and mistral architecture, Seed-X offers outstanding translation performance in a lightweight and efficient package, ideal for deployment and inference.
-<br>
 * **Broad domain coverage**: Seed-X excels on a highly challenging translation test set spanning diverse domains, including the internet, science and technology, office dialogues, e-commerce, biomedicine, finance, law, literature, and entertainment.
 
 
@@ -95,11 +93,11 @@ print(responses)
 
 ## 🏆 Performance
 
-We evaluated Seed-X on a diverse set of translation benchmarks, including FLORES-200, WMT-25, and a publicly released challenge set accompanied by human evaluations.
+We evaluated Seed-X on a diverse set of translation benchmarks, including FLORES-200, WMT-25, and a publicly released [challenge set](https://github.com/ByteDance-Seed/Seed-X-7B/tree/main/challenge_set) accompanied by human evaluations.
 
 ![performance](/imgs/model_comparsion.png)
 
-For detailed benchmark results and analysis, please refer to our [Technical Report]().
+For detailed benchmark results and analysis, please refer to our [Technical Report](https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/Technical_Report.pdf).
 ## License
 This project is licensed under OpenMDW. See the [LICENSE]() flie for details.
 
