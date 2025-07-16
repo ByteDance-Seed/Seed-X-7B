@@ -24,7 +24,7 @@
 <!-- 注释：以上为Seed官方信息，可直接复制使用，请注意导入“Seed WeChat”（第12行）、“Seed logo”(第20行)图片替换 -->
 
 
-# Seed-X: Building Strong Open-source Multilingual Translation LLM with 7B Parameters
+# Seed-X: Building Strong Multilingual Translation LLM with 7B Parameters
 <p align="center">
   <a href="https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/Technical_Report.pdf">
     <img src="https://img.shields.io/badge/Seed--X-Report-blue"></a>
