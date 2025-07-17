@@ -60,9 +60,9 @@ We are excited to introduce Seed-X, featuring three powerful models:
 
 | Model Name  | Description | Download |
 | ----------- | ----------- |-----------
-| Seed-X-Instruct  | Instruction-tuned for alignment with user intent. |🤗 [Model]()|
-| Seed-X-PPO | RL trained to boost translation capabilities.     | 🤗 [Model]()|
-|Seed-X-RM | Reward model to evaluate the quality of translation.|  🤗 [Model]()| 
+| Seed-X-Instruct  | Instruction-tuned for alignment with user intent. |🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-Instruct-7B)|
+| Seed-X-PPO | RL trained to boost translation capabilities.     | 🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-PPO-7B)|
+|Seed-X-RM | Reward model to evaluate the quality of translation.|  🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-RM-7B)| 
 
 ### 👉 Deploying Seed-X-PPO with ```vllm```
 ```python
