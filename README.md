@@ -28,7 +28,7 @@
 <p align="center">
   <a href="https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/Technical_Report.pdf">
     <img src="https://img.shields.io/badge/Seed--X-Report-blue"></a>
-  <a href="XXXX">
+  <a href="https://huggingface.co/collections/ByteDance-Seed/seed-x-6878753f2858bc17afa78543">
     <img src="https://img.shields.io/badge/Seed--X-Hugging Face-brightgreen"></a>
   <a href="https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/LICENSE.openmdw">
     <img src="https://img.shields.io/badge/License-OpenMDW-yellow"></a>
