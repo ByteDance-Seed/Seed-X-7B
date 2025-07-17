@@ -30,6 +30,8 @@
     <img src="https://img.shields.io/badge/Seed--X-Report-blue"></a>
   <a href="XXXX">
     <img src="https://img.shields.io/badge/Seed--X-Hugging Face-brightgreen"></a>
+  <a href="https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/LICENSE.openmdw">
+    <img src="https://img.shields.io/badge/License-OpenMDW-yellow"></a>
 </p>
 
 <!-- 🤗 [HuggingFace]() | 📄 [Technical Report](/Technical_Report.pdf) -->
@@ -42,11 +44,9 @@ We are excited to introduce **Seed-X**, a powerful open-source multilingual tran
 专属微信群出现在两个位置，第34行、第42行，可以联系EB同学创建 -->
 
 ## 📢 News
-[2025/07/18] 🔥 We have released the technical report.
+[2025/07/17] 🔥 We have released the Seed-X-Challenge-Set.
 <br>
-[2025/07/18] 🔥 We have released the Seed-X-Challenge-Set.
-<br>
-[2025/07/18] 🔥 Seed-X-Instruct/PPO/RM are now avaliable on Huggingface!
+[2025/07/17] 🔥 Seed-X-Instruct/PPO/RM are now avaliable on Huggingface!
 
 ## 🌟 Highlights
 
@@ -68,7 +68,7 @@ We are excited to introduce Seed-X, featuring three powerful models:
 ```python
 from vllm import LLM, SamplingParams
 
-model_path = "/ByteDance-Seed/Seed-X-PPO-7B"
+model_path = "./ByteDance-Seed/Seed-X-PPO-7B"
 
 model = LLM(model=model_path,
             max_num_seqs=512,
