@@ -37,7 +37,7 @@
 <!-- 🤗 [HuggingFace]() | 📄 [Technical Report](/Technical_Report.pdf) -->
 
 
-We are excited to introduce **Seed-X**, a powerful open-source multilingual translation language model series, including instruction and reasoning models, with 7B parameters pushing the boundaries of translation capabilities. 
+We are excited to introduce **Seed-X**, a powerful series of open-source multilingual translation language models, including an instruction model, a reinforcement learning model, and a reward model. It pushes the boundaries of translation capabilities within 7 billion parameters.
 
 <!-- 注释：以上为项目基础信息，以项目COMET举例，Comet一级标题（第25行）、徽章Comet名字（第28、30、32、34行）记得替换，徽章可按需使用
 请注意，徽章可根据具体项目自定义，如技术成果落地页、技术成果报告/Paper、Hugging Face、项目微信交流群、License、打榜榜单等，更换名字和链接即可；
@@ -54,6 +54,13 @@ We are excited to introduce **Seed-X**, a powerful open-source multilingual tran
 * **Deployment and inference-friendly**: With a compact 7B parameter count and mistral architecture, Seed-X offers outstanding translation performance in a lightweight and efficient package, ideal for deployment and inference.
 * **Broad domain coverage**: Seed-X excels on a highly challenging translation test set spanning diverse domains, including the internet, science and technology, office dialogues, e-commerce, biomedicine, finance, law, literature, and entertainment.
 
+## 🏆 Performance
+
+We evaluated Seed-X on a diverse set of translation benchmarks, including FLORES-200, WMT-25, and a publicly released [challenge set](https://github.com/ByteDance-Seed/Seed-X-7B/tree/main/challenge_set) accompanied by human evaluations.
+
+![performance](/imgs/model_comparsion.png)
+
+For detailed benchmark results and analysis, please refer to our [Technical Report](https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/Technical_Report.pdf).
 
 ## ⚡ Quick Start
 We are excited to introduce Seed-X, featuring three powerful models:
@@ -94,16 +101,8 @@ responses = [res.outputs[0].text.strip() for res in results]
 
 print(responses)
 ```
-
-## 🏆 Performance
-
-We evaluated Seed-X on a diverse set of translation benchmarks, including FLORES-200, WMT-25, and a publicly released [challenge set](https://github.com/ByteDance-Seed/Seed-X-7B/tree/main/challenge_set) accompanied by human evaluations.
-
-![performance](/imgs/model_comparsion.png)
-
-For detailed benchmark results and analysis, please refer to our [Technical Report](https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/Technical_Report.pdf).
 ## License
-This project is licensed under OpenMDW. See the [LICENSE](https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/LICENSE.openmdw) flie for details.
+This project is licensed under OpenMDW. See the [LICENSE](https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/LICENSE.openmdw) file for details.
 
 ## Citation
 <!-- If you find Seed-X useful for your research and applications, feel free to give us a star ⭐ or cite us using:
