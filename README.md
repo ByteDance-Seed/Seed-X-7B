@@ -44,9 +44,9 @@ We are excited to introduce **Seed-X**, a powerful open-source multilingual tran
 专属微信群出现在两个位置，第34行、第42行，可以联系EB同学创建 -->
 
 ## 📢 News
-[2025/07/17] 🔥 We have released the Seed-X-Challenge-Set.
+[2025/07/18] 🔥 We have released the Seed-X-Challenge-Set.
 <br>
-[2025/07/17] 🔥 Seed-X-Instruct/PPO/RM are now avaliable on Huggingface!
+[2025/07/18] 🔥 Seed-X-Instruct/PPO/RM are now avaliable on Huggingface!
 
 ## 🌟 Highlights
 
@@ -81,11 +81,15 @@ messages = [
     "Translate the following English sentence into Chinese and explain it in detail:\nMay the force be with you <zh>" # with CoT
 ]
 
-sampling_params = SamplingParams(temperature=0,
-                                 max_tokens=4096,
+# Sampling
+decoding_params = SamplingParams(temperature=0,
+                                 max_tokens=512,
                                  skip_special_tokens=True)
+# Beam Search
+decoding_params = BeamSearchParams(beam_width=4, 
+                                    max_tokens=512)
 
-results = model.generate(messages, sampling_params)
+results = model.generate(messages, decoding_params)
 responses = [res.outputs[0].text.strip() for res in results]
 
 print(responses)
@@ -102,7 +106,7 @@ For detailed benchmark results and analysis, please refer to our [Technical Repo
 This project is licensed under OpenMDW. See the [LICENSE](https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/LICENSE.openmdw) flie for details.
 
 ## Citation
-If you find Seed-X useful for your research and applications, feel free to give us a star ⭐ or cite us using:
+<!-- If you find Seed-X useful for your research and applications, feel free to give us a star ⭐ or cite us using:
 ```bibtex
 @Article{XXX,
       title={XXXXXXXXXXX}, 
@@ -112,8 +116,8 @@ If you find Seed-X useful for your research and applications, feel free to give 
       archivePrefix={arXiv},
       primaryClass={cs.XX}
 }
-```
-We will soon publish our technical report on Arxiv.
+```-->
+We will soon publish our technical report on Arxiv. 
 
 ## About [ByteDance Seed Team](https://seed.bytedance.com/)
 
