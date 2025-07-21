@@ -26,7 +26,7 @@
 
 # Seed-X: Building Strong Multilingual Translation LLM with 7B Parameters
 <p align="center">
-  <a href="https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/Technical_Report.pdf">
+  <a href="https://arxiv.org/pdf/2507.13618">
     <img src="https://img.shields.io/badge/Seed--X-Report-blue"></a>
   <a href="https://huggingface.co/collections/ByteDance-Seed/seed-x-6878753f2858bc17afa78543">
     <img src="https://img.shields.io/badge/Seed--X-Hugging Face-brightgreen"></a>
@@ -60,7 +60,7 @@ We evaluated Seed-X on a diverse set of translation benchmarks, including FLORES
 
 ![performance](/imgs/model_comparsion.png)
 
-For detailed benchmark results and analysis, please refer to our [Technical Report](https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/Technical_Report.pdf).
+For detailed benchmark results and analysis, please refer to our [Technical Report](https://arxiv.org/pdf/2507.13618).
 
 ## ⚡ Quick Start
 We are excited to introduce Seed-X, featuring three powerful models:
@@ -72,8 +72,18 @@ We are excited to introduce Seed-X, featuring three powerful models:
 |Seed-X-RM | Reward model to evaluate the quality of translation.|  🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-RM-7B)| 
 
 ### 👉 Deploying Seed-X-PPO with ```vllm```
+
+❗**The language tags at the end of the prompt is necessary**, which are used in PPO training. For example, when the target language is German, \<de\> needs to be added. You can refer to the above table for language abbreviations.
+
+❗**This model is specialized in multilingual translation**, which is unexpected to support other tasks. 
+
+❗**We don't have any chat template**, thus you don't have to perform ```tokenizer.apply_chat_template```. Please avoid prompting the model in a multi-round conversation format.
+
+❗**We recommend against using unofficial quantized versions for local deployment.** We will soon release an official quantized model and develop a demo on Hugging Face Space.
+
+Here is a simple example demonstrating how to load the model and perform translation using ```vllm```
 ```python
-from vllm import LLM, SamplingParams
+from vllm import LLM, SamplingParams, BeamSearchParams
 
 model_path = "./ByteDance-Seed/Seed-X-PPO-7B"
 
@@ -88,13 +98,13 @@ messages = [
     "Translate the following English sentence into Chinese and explain it in detail:\nMay the force be with you <zh>" # with CoT
 ]
 
-# Sampling
+# Beam search (We recommend using beam search decoding)
+decoding_params = BeamSearchParams(beam_width=4,
+                                   max_tokens=512)
+# Greedy decoding
 decoding_params = SamplingParams(temperature=0,
                                  max_tokens=512,
                                  skip_special_tokens=True)
-# Beam Search
-decoding_params = BeamSearchParams(beam_width=4, 
-                                    max_tokens=512)
 
 results = model.generate(messages, decoding_params)
 responses = [res.outputs[0].text.strip() for res in results]
@@ -105,19 +115,17 @@ print(responses)
 This project is licensed under OpenMDW. See the [LICENSE](https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/LICENSE.openmdw) file for details.
 
 ## Citation
-<!-- If you find Seed-X useful for your research and applications, feel free to give us a star ⭐ or cite us using:
 ```bibtex
-@Article{XXX,
-      title={XXXXXXXXXXX}, 
-      author={XXX,XXX,XXX,XXX},
+@misc{cheng2025seedxbuildingstrongmultilingual,
+      title={Seed-X: Building Strong Multilingual Translation LLM with 7B Parameters}, 
+      author={Shanbo Cheng and Yu Bao and Qian Cao and Luyang Huang and Liyan Kang and Zhicheng Liu and Yu Lu and Wenhao Zhu and Jingwen Chen and Zhichao Huang and Tao Li and Yifu Li and Huiying Lin and Sitong Liu and Ningxin Peng and Shuaijie She and Lu Xu and Nuo Xu and Sen Yang and Runsheng Yu and Yiming Yu and Liehao Zou and Hang Li and Lu Lu and Yuxuan Wang and Yonghui Wu},
       year={2025},
-      eprint={XXXX.XXXXX},
+      eprint={2507.13618},
       archivePrefix={arXiv},
-      primaryClass={cs.XX}
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2507.13618}, 
 }
-```-->
-We will soon publish our technical report on Arxiv. 
-
+```
 ## About [ByteDance Seed Team](https://seed.bytedance.com/)
 
 Founded in 2023, ByteDance Seed Team is dedicated to crafting the industry's most advanced AI foundation models. The team aspires to become a world-class research team and make significant contributions to the advancement of science and society.
