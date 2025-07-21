@@ -96,8 +96,10 @@ model = LLM(model=model_path,
             gpu_memory_utilization=0.95)
 
 messages = [
-    "Translate the following English sentence into Chinese:\nMay the force be with you <zh>", # without CoT
-    "Translate the following English sentence into Chinese and explain it in detail:\nMay the force be with you <zh>" # with CoT
+    # without CoT
+    "Translate the following English sentence into Chinese:\nMay the force be with you <zh>",
+    # with CoT
+    "Translate the following English sentence into Chinese and explain it in detail:\nMay the force be with you <zh>" 
 ]
 
 # Beam search (We recommend using beam search decoding)
