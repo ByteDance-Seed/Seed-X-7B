@@ -82,6 +82,8 @@ We are excited to introduce Seed-X, featuring three powerful models:
 ❗**We recommend against using unofficial quantized versions for local deployment.** We will soon release an official quantized model and develop a demo on Hugging Face Space.
 
 Here is a simple example demonstrating how to load the model and perform translation using ```vllm```
+
+Recommended: ```vllm==0.8.0, transformers==4.51.3```
 ```python
 from vllm import LLM, SamplingParams, BeamSearchParams
 
