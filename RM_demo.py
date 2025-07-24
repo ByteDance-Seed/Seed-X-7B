@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
     local_model_dir = "Your local model dir"
     model_dir = f"{local_model_dir}/Seed-X-RM-7B"  
-    prompt = ["Translate the following English sentence into Chinese:\nMay the force be with you <zh>"]
+    prompt = ["Translate the following English sentence into Chinese:\nMay the force be with you <zh>","Translate the following English sentence into Chinese:\nMay the force be with you <zh>"]
     candidate = ["愿原力与你同在","愿力量与你同在"]
     model = RewardModel(model_dir)
     scores = model.score(prompt, candidate)    # output [1.46875, -0.376953125]
