@@ -46,7 +46,7 @@ We are excited to introduce **Seed-X**, a powerful series of open-source multili
 专属微信群出现在两个位置，第34行、第42行，可以联系EB同学创建 -->
 
 ## 📢 News
-[2025/07/28] 🔥 We have deployed our Seed-X-PPO on 🤗 [HuggingFace Spaces](https://huggingface.co/spaces/ByteDance-Seed/Seed-X), Welcome to try out our model!
+[2025/07/28] 🔥 We have deployed our Seed-X-PPO on 🤗 [HuggingFace Spaces](https://huggingface.co/spaces/ByteDance-Seed/Seed-X). Welcome to try out our model!
 <br>
 [2025/07/28] 🔥 We have released GPTQ-quantized 8-bit and 4-bit PPO models.
 <br>
