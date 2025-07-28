@@ -48,7 +48,7 @@ We are excited to introduce **Seed-X**, a powerful series of open-source multili
 ## 📢 News
 [2025/07/28] 🔥 We have deployed our Seed-X-PPO on 🤗 [HuggingFace Spaces](https://huggingface.co/spaces/ByteDance-Seed/Seed-X). Welcome to try out our model!
 <br>
-[2025/07/28] 🔥 We have released GPTQ-quantized 8-bit and 4-bit PPO models.
+[2025/07/28] 🔥 We have released quantized 8-bit and 4-bit PPO models.
 <br>
 [2025/07/18] 🔥 We have released the Seed-X-Challenge-Set.
 <br>
@@ -76,7 +76,7 @@ We are excited to introduce Seed-X, featuring three powerful models:
 | Seed-X-Instruct  | Instruction-tuned for alignment with user intent. |🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-Instruct-7B)|
 | Seed-X-PPO | RL trained to boost translation capabilities.     | 🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-PPO-7B)|
 | Seed-X-PPO-GPTQ-Int8 | Quantization: GPTQ 8-bit.     | 🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-PPO-7B-GPTQ-Int8)|
-| Seed-X-PPO-GPTQ-Int4 | Quantization: GPTQ 4-bit.     | 🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-PPO-7B-GPTQ-Int4)|
+| Seed-X-PPO-AWQ-Int4 | Quantization: AWQ 4-bit.     | 🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-PPO-7B-AWQ-Int4)|
 | Seed-X-RM | Reward model to evaluate the quality of translation.|  🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-RM-7B)| 
 
 ### 👉 Deploying Seed-X-PPO with ```vllm```
