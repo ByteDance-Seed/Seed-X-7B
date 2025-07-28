@@ -30,6 +30,8 @@
     <img src="https://img.shields.io/badge/Seed--X-Report-blue"></a>
   <a href="https://huggingface.co/collections/ByteDance-Seed/seed-x-6878753f2858bc17afa78543">
     <img src="https://img.shields.io/badge/Seed--X-Hugging Face-brightgreen"></a>
+ <a href="https://huggingface.co/spaces/ByteDance-Seed/Seed-X">
+    <img src="https://img.shields.io/badge/Seed--X-DEMO-purple"></a>
   <a href="https://github.com/ByteDance-Seed/Seed-X-7B/blob/main/LICENSE.openmdw">
     <img src="https://img.shields.io/badge/License-OpenMDW-yellow"></a>
 </p>
@@ -44,6 +46,10 @@ We are excited to introduce **Seed-X**, a powerful series of open-source multili
 专属微信群出现在两个位置，第34行、第42行，可以联系EB同学创建 -->
 
 ## 📢 News
+[2025/07/28] 🔥 We have deployed our Seed-X-PPO on 🤗 [HuggingFace Spaces](https://huggingface.co/spaces/ByteDance-Seed/Seed-X), Welcome to try out our model!
+<br>
+[2025/07/28] 🔥 We have released GPTQ-quantized 8-bit and 4-bit PPO models.
+<br>
 [2025/07/18] 🔥 We have released the Seed-X-Challenge-Set.
 <br>
 [2025/07/18] 🔥 Seed-X-Instruct/PPO/RM are now avaliable on Huggingface!
@@ -69,7 +75,9 @@ We are excited to introduce Seed-X, featuring three powerful models:
 | ----------- | ----------- |-----------
 | Seed-X-Instruct  | Instruction-tuned for alignment with user intent. |🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-Instruct-7B)|
 | Seed-X-PPO | RL trained to boost translation capabilities.     | 🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-PPO-7B)|
-|Seed-X-RM | Reward model to evaluate the quality of translation.|  🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-RM-7B)| 
+| Seed-X-PPO-GPTQ-Int8 | Quantization: GPTQ 8-bit.     | 🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-PPO-7B-GPTQ-Int8)|
+| Seed-X-PPO-GPTQ-Int4 | Quantization: GPTQ 4-bit.     | 🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-PPO-7B-GPTQ-Int4)|
+| Seed-X-RM | Reward model to evaluate the quality of translation.|  🤗 [Model](https://huggingface.co/ByteDance-Seed/Seed-X-RM-7B)| 
 
 ### 👉 Deploying Seed-X-PPO with ```vllm```
 
